@@ -1,5 +1,5 @@
 # Python module for piglow peripheral for RaspberryPi.
-# Initializes device, provides helper function.AInitialization
+# Initializes device, provides helper function. Initialization
 # code taken from pimoroni's example script
 
 from smbus import SMBus
@@ -8,7 +8,7 @@ from smbus import SMBus
 CMD_ENABLE_OUTPUT = 0x00
 CMD_ENABLE_LEDS = 0x13
 CMD_SET_PWM_VALUES = 0x01
-CMD_UPDATE = 0x16e
+CMD_UPDATE = 0x16
 
 # TODO: Maybe this should go in a class __init__ member?
 i2c_addr = 0x54 # i2c address of SN3218
