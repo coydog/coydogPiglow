@@ -9,4 +9,6 @@ as coydogPiglow.py, or add coydogPiglow to your $PYTHONPATH.
  
 More to come.
 
+TODO: Addressing by color. Color blending. A rewrite in C lol.
+
 (c) 2013 Coydog Software
