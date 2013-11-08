@@ -3,6 +3,9 @@ coydogPiglow
 coydogPiglow is a Python module containing initialization
 and helper functions for the Pimoroni Piglow, based in part
 on the example code provided by Pimoroni.
+
+To run the examples, either copy them into the same directory
+as coydogPiglow.py, or add coydogPiglow to your $PYTHONPATH.
  
 More to come.
 
