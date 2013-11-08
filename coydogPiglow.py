@@ -4,6 +4,7 @@
 
 from smbus import SMBus
 
+debugLog = False;
 # command register addresses for SN3218 IC
 CMD_ENABLE_OUTPUT = 0x00
 CMD_ENABLE_LEDS = 0x13
@@ -15,9 +16,17 @@ i2c_addr = 0x54 # i2c address of SN3218
 i2c_bus = 1 # might be 0 on earliest Pi revisions?
 
 def update_leds(values):
-	print "update_leds() " + str(values)
+	if debugLog:
+		print "update_leds() " + str(values)
 	write_i2c(CMD_SET_PWM_VALUES, values)
 	write_i2c(CMD_UPDATE, 0xFF)
+
+# TODO: API to update a single or group of LED's, but keep 
+# state of others. Will track state in the module (or as a 
+# class member)
+
+# TODO: "fade in" - give a range to fade across and a time.
+# Might can do logarithmic fading.
 
 # intended as internal interface
 def write_i2c(reg_addr, value):
