@@ -15,13 +15,14 @@ try:
 		i += 1
 	bright = 255
 
+	step_abs = 1
+	if len(sys.argv) > 1:
+		step_abs = int(sys.argv[1])
+	if step_abs < 1:
+		step_abs = 1
+
         while True:
 		done = False
-		step_abs = 1
-		if len(sys.argv) > 1:
-			step_abs = int(sys.argv[1])
-		if step_abs < 1:
-			step_abs = 1
 		step = step_abs
 		i = random.randrange(0,18)
 		while not done:
